@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-^%vfxcaw)649t3f75ay(u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.105']
+ALLOWED_HOSTS = ['portfolio-fbqc.onrender.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
