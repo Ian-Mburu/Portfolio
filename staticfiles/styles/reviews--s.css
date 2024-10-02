@@ -1,0 +1,114 @@
+body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Ensures the body takes full viewport width */
+    overflow-x: hidden; /* Disables horizontal scrolling */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    padding: 30px;
+    gap: 30px;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+}
+
+form button {
+    padding: 10px 30px;
+    width: 200px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+}
+
+.reviews-1 {
+    margin: 100px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
+
+.reviews-2 {
+    display: grid; /* Change from flex to grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-fill ensures it breaks when needed */
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+
+.review--3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #fff;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.review--3 a {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+}
+
+.img-1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #313030;
+    padding: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+
+.review--3 small {
+    background: #313030;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.stars {
+    font-size: 24px;
+    color: gold;
+}
+
+.stars span {
+    margin-right: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .reviews-1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .reviews-2 {
+        width: 300px;
+    }
+}

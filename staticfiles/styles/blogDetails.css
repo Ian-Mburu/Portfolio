@@ -1,0 +1,40 @@
+body {
+    color: white;
+    margin-top: 100px;
+}
+
+.blog {
+    border: 1px solid #fff;
+    width: 1330px;
+}
+
+.blog-image {
+    width: 500px;
+    height: 300px;
+    border-radius: 3px;
+}
+
+.blog-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: sans-serif cursive;
+    font-weight: 600;
+}
+
+.par {
+    color: #fff;
+    font-size: 15px;
+    font-family: sans-serif cursive;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}

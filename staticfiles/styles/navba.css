@@ -1,0 +1,72 @@
+body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    margin: 20.1px 0 0 -10px;
+    position: fixed;
+    list-style: none;
+    top: -20px;  
+    background: #000000;  
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar .icon {
+    padding: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    border: 2px solid #000000;
+    border-radius: 3px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #000000;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    background: #575757;
+    transform: scale(1.1); 
+    color: #fff;
+}
+
+.icon span {
+    font-size: 10px;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;  /* Stack the navbar items vertically on mobile */
+        gap: 5px;
+        padding: 5px;
+        position: static;  /* Remove fixed positioning to avoid overlap issues */
+        margin-left: 00px;
+    }
+}
