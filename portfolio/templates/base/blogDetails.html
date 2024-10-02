@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/bag1.png' %}">
+    <title>Blogs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/blogDetails.css' %}">
+</head>
+<body>
+
+    {% block content %}
+    
+    {% include 'navbar.html' %}
+
+    <h2>{{ blog.title }} Blog Details</h2>   
+
+    <div class="blog">
+        <div class="blog-1">
+    
+            <a href="{% url 'blogDetails' blog.pk %}" class="detail-link">
+                <p class="par">{{ blog.title }}</p>
+                <br>
+                <br>
+                <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="blog-image" />
+                
+                <p class="par" >{{ blog.highlights }}</p>
+                <p class="par" >{{ blog.contributions }}</p>
+            </a>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>

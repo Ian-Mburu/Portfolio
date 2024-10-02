@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/bag1.png' %}">
+    <title>Reviews Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/reviewDetail-.css' %}">
+</head>
+<body>
+    {% load custom_filters %}
+    {% block content %}
+
+    {% include 'navbar.html' %}
+
+            <div class="review-1">
+                <img class="img" src="{{ review.image.url }}" alt="Review image">
+
+                <div class="stars">
+                    <p  class="review-text">{{ review.review_text }}</p>
+                    <div class="stars-2">
+                    {% for i in "1 2 3 4 5"|split:" " %}
+                        {% if i|add:0 <= review.rating %}
+                            <span>&#9733;</span>  <!-- Filled star -->
+                        {% else %}
+                            <span>&#9734;</span>  <!-- Empty star -->
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+    
+
+    {% endblock %}
+</body>
+</html>

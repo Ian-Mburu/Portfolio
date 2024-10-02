@@ -1,0 +1,21 @@
+{% include 'navbar.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/homes.css' %}">
+
+    <div class="container">
+        <div class="img">
+            <img src="{% static 'images/5thJuly2023-27.jpg' %}" alt="Image">
+        </div>
+
+        <div class="content">
+            <h1>I'M IAN MBURU.</h1>
+            <h2>Software Developer</h2>
+            <p>
+                Ian is a dedicated software developer whose tech journey has been driven by an unwavering <br> commitment to excellence and a desire to make a positive impact. Whether it is coding, <br> writing, or collaborating with other talented teams, he is dedicated to pushing boundaries and <br> achieving remarkable results. With creative thinking, he can solve complex problems through <br> a creative approach and find solutions to every problem. One year of experience and being able <br> to see what technology can do is what keeps me learning and moving in this field of Software <br> Engineering.
+            </p>
+           
+        </div>
+    </div>
+{% endblock content %}

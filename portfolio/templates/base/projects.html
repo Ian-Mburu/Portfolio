@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/bag1.png' %}">
+    <title>Projects</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/projects-qa.css' %}">
+</head>
+<body>
+    {% block content %}
+    
+    {% include 'navbar.html' %}
+    
+    <div class="content">
+            <header>
+                <h1>Project Showcase</h1>
+            </header>
+        
+            <section class="projects-list">
+                {% for project in projects %}
+                <a href="{% url 'project-details' project.pk %}" class="details-link">
+                    <div class="project-card">
+                        <img src="{{ project.projectImage.url }}" alt="{{ project.projectName }} Image" class="project-image">
+                        <div class="project-details">
+                            <h2>{{ project.projectName }}</h2>
+                        </div>
+                    </div>
+                </a>
+                {% empty %}
+                    <p>No projects available.</p>
+                {% endfor %}
+            </section>
+        
+    </div>
+
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/bag1.png' %}">
+    <title>Reviews</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/reviews--s.css' %}">
+</head>
+<body>
+    {% load custom_filters %}
+    {% include 'navbar.html' %}
+
+    <div class="reviews-1">
+        {% block content %}
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                {{ form.image }}
+                {% if form.image.errors %}
+                    <div class="error">{{ form.image.errors }}</div>
+                {% endif %}
+            </div>
+        
+            <div class="form-group">
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <div class="error">{{ form.name.errors }}</div>
+                {% endif %}
+            </div>
+        
+            <div class="form-group">
+                {{ form.review_text }}
+                {% if form.review_text.errors %}
+                    <div class="error">{{ form.review_text.errors }}</div>
+                {% endif %}
+            </div>
+        
+            <div class="form-group">
+                {{ form.rating }}
+                {% if form.rating.errors %}
+                    <div class="error">{{ form.rating.errors }}</div>
+                {% endif %}
+            </div>
+        
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+        
+
+        {% load static %}
+        <div class="reviews-2" id="reviews-container">
+            {% for review in reviews %}
+                <div class="review--3">
+                    <img class="img-1" src="{{ review.image.url }}" alt="">
+                <!--<p>{{ review.review_text }}</p>-->
+                    <div class="stars">
+                        {% for i in "1 2 3 4 5"|split:" " %}
+                            {% if i|add:0 <= review.rating %}
+                                <span>&#9733;</span>  <!-- Filled star -->
+                            {% else %}
+                                <span>&#9734;</span>  <!-- Empty star -->
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a href="{% url 'reviewsDetails' review.pk %}">Review by {{ review.name }} </a>
+                </div>
+            {% endfor %}
+        </div>
+        
+        
+
+        {% endblock %}
+    </div>
+
+    
+
+    
+</body>
+</html>

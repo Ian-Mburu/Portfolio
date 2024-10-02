@@ -1,0 +1,78 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/about--s.css' %}">
+<body>
+    
+<div class="about-3">
+<div class="about-1">
+
+    <div class="title">
+    </div>
+
+    <div class="personal-info">
+        <div class="title-1">
+            <h2>Personal Info</h2>
+        </div>
+
+        <div class="info-1">
+        <div class="bio">
+            <img src="{% static 'images/5thJuly2023-29.jpg' %}" alt="">
+            <p>
+                Ian is a dedicated software developer whose tech journey has been driven by an unwavering <br> commitment to excellence and a desire to make a positive impact. Whether it is coding, <br> writing, or collaborating with other talented teams, he is dedicated to pushing boundaries and <br> achieving remarkable results. With creative thinking, he can solve complex problems through <br> a creative approach and find solutions to every problem. One year of experience and being able <br> to see what technology can do is what keeps me learning and moving in this field of Software <br> Engineering.
+            </p>
+        </div>
+
+        <div class="info">
+            <div class="first-name">
+                <span>First Name:</span>
+                <h3>Ian</h3>
+            </div>
+
+            <div class="first-name">
+                <span>Last Name:</span>
+                <h3>Mburu</h3>
+            </div>
+
+            <div class="first-name">
+                <span>Nationality:</span>
+                <h3>Kenyan</h3>
+            </div>
+
+            <div class="first-name">
+                <span>Phone</span>
+                <h3>+254790193595</h3>
+            </div>
+
+            <div class="first-name">
+                <span>Email:</span>
+                <h3>ianongaruiya@gmail.com</h3>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-2">
+
+    <div class="education">
+        <h1>Education</h1>
+        <h3>Zindua School</h3>
+        <p>Diploma in Information Technology</p>
+        <small>2023 - 2024</small>
+    </div>
+
+    <div class="objective">
+        <p>
+            "As an enthusiastic and detail-oriented entry-level software engineer, <br> I am seeking a role where I can apply my foundational skills in coding <br> and problem-solving to contribute to innovative projects. I am eager to <br> join a collaborative team where I can further develop my technical <br> abilities, learn from experienced mentors, and make meaningful <br> contributions to software development."
+
+        </p>
+    </div>
+</div>
+</div>
+
+</body>
+{% endblock content %}

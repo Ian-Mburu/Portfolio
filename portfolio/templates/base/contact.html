@@ -1,0 +1,83 @@
+{% include 'navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/contact-ss.css' %}">
+
+<div class="contact">
+    <div class="contact-1">
+        <p>
+            Feel free to get in touch with me. I am always <br> open to discussing new projects, creative ideas <br> or opportunities to be part of your visions.
+        </p>
+
+        <div class="mail">
+            <img src="{% static 'images/mail.png' %}" alt="Mail icon">
+            <a href="mailto:ianongaruiya@gmail.com">ianongaruiya@gmail.com</a> 
+        </div>
+        <br>
+
+        <div class="call">
+            <img src="{% static 'images/telephone.png' %}" alt="Telephone icon">
+            <a href="tel:+254790193595">+254790193595</a> 
+        </div>
+        <br>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/ian-mburu-2776b1287/"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn icon"></a>
+            <a href="https://x.com/Mbu_Ian"><img src="{% static 'images/twitter.png' %}" alt="Twitter icon"></a>
+            <a href="https://github.com/Ian-Mburu"><img src="{% static 'images/github.png' %}" alt="GitHub icon"></a>
+        </div>
+    </div>
+
+
+        <div class="contact-2">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        {{ form.name }}
+                    </div>
+        
+                    <div class="form-group">
+                        {{ form.email }}
+                    </div>
+        
+                    <div class="form-group">
+                        {{ form.subject }}
+                    </div>
+        
+                    <div class="form-group">
+                        {{ form.message }}
+                    </div>
+        
+                    <button type="submit">Send Message</button>
+                </form>
+                
+                {% if form.errors %}
+                    <div class="form-errors">
+                        <ul>
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+</div>
+        
+{% endblock content %}

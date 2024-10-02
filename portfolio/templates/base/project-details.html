@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/bag1.png' %}">
+    <title>Project Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/project-details-s.css' %}">
+</head>
+<body>
+    {% block content %}
+    
+    {% include 'navbar.html' %}
+    
+    <div class="content">
+            <header>
+                <h1>Project Showcase</h1>
+            </header>
+        
+            <section class="projects-list">
+                    <div class="project-card">
+                        <img src="{{ project.projectImage.url }}" alt="{{ project.projectName }} Image" class="project-image">
+                        <div class="project-details">
+                            <h2>{{ project.projectName }}</h2>
+                            <p1><strong>Technology:</strong> {{ project.projectTechnology }}</p1>
+                            <a href="https://funza.onrender.com/">Project Link</a>
+                            <p>{{ project.projectDescription }}</p>
+                        </div>
+                    </div>
+            </section>
+        
+    </div>
+
+    {% endblock content %}
+</body>
+</html>
