@@ -28,7 +28,9 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-^%vfxcaw)649t3f75ay(u
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+ALLOWED_HOSTS = ['portfolio-56if.onrender.com']
+
 
 # 
 # Application definition
