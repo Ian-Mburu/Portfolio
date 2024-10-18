@@ -45,8 +45,8 @@ class Review(models.Model):
 class Blogs(models.Model):
     image = models.ImageField(upload_to='project_images/', null=False, blank=False)
     title = models.CharField(max_length=200)
-    highlights = models.TextField(max_length=1000)
-    contributions = models.TextField(max_length=1000)
+    highlights = models.TextField(max_length=10000)
+    contributions = models.TextField(max_length=10000)
 
     def __str__(self):
         return self.title

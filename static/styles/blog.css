@@ -48,8 +48,9 @@ h1 {
 }
 
 .detail-link {
-    border: solid 1px #ffffff;
+    border: solid 1px #c52f2f;
     display: flex;
+    width: 300px;
     object-fit: cover;
     flex-direction: column;
     justify-content: center;
