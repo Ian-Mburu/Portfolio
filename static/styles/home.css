@@ -2,8 +2,8 @@ body {
     background: #000000;
     margin: 0;
     padding: 0;
-    width: 100vw; /* Ensures the body takes full viewport width */
-    overflow-x: hidden; /* Disables horizontal scrolling */
+    width: 100vw; 
+    overflow-x: hidden; 
 }
 
 .container {
@@ -11,16 +11,20 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 50px;
-    margin: 70px 0 0 200px;
-    margin-top: 200px;
+    margin: 0px 0 50px 200px;
+    margin-top: 150px;
     color: #ffffff;
-    max-width: 100%; /* Ensures the container doesn't overflow */
+    max-width: 100%;
+    position: sticky;
+    top: 0; 
 }
 
 .img img {
-    width: 350px;
-    height: auto;
-    border-radius: 5px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: center;
+    object-fit: cover;
 }
 
 .content {
@@ -43,8 +47,9 @@ body {
 
 .content p {
     font-size: 15px;
-    font-family: cursive sans-serif;
+    font-family: sans-serif;
     font-weight: lighter;
+    
 }
 
 button {
