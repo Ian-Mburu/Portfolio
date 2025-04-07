@@ -23,8 +23,9 @@
                 {% for project in projects %}
                 <a href="{% url 'project-details' project.pk %}" class="details-link">
                     <div class="project-card">
-                        <img src="{{ project.projectImage.url }}" alt="{{ project.projectName }} Image" class="project-image">
                         <div class="project-details">
+                            <p1><strong>Technology:</strong> {{ project.projectTechnology }}</p1>
+                            <h2>{{ project.projectDate }}</h2>
                             <h2>{{ project.projectName }}</h2>
                         </div>
                     </div>

@@ -66,7 +66,7 @@ a {
         flex-direction: row;  /* Stack the navbar items vertically on mobile */
         gap: 5px;
         padding: 5px;
-        position: static;  /* Remove fixed positioning to avoid overlap issues */
+        position: fixed;  /* Remove fixed positioning to avoid overlap issues */
         margin-left: 00px;
     }
 }

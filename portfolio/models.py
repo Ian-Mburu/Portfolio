@@ -4,10 +4,10 @@ from django.db import models
 
 
 class CreateProject(models.Model):
-    projectImage = models.ImageField(upload_to='project_images/', null=False, blank=False)
     projectName = models.CharField(max_length=200)
     projectTechnology = models.CharField(max_length=20, null=False, blank=False)
     projectDescription = models.TextField(null=False, blank=False)
+    projectDate = models.DateField(null=False, blank=False)
 
     class Meta:
         verbose_name = 'Project'

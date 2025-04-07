@@ -9,7 +9,7 @@ body {
 }
 
 .about-1 {
-    margin-top: 100px;
+    margin: 100px 0 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +56,8 @@ body {
     flex-direction: column;
     align-items: center;
     border: 1px solid #313030;
-    padding: 20px   ;
+    padding: 20px 0;
+    width: 50%;
 }
 
 .bio p {
@@ -64,6 +65,7 @@ body {
     font-family: sans-serif;
     font-weight: lighter;
     letter-spacing: 1px;
+    width: 80%;
 }
 
 .bio img {
@@ -126,8 +128,9 @@ body {
 
 @media (max-width: 768px) {
     .about-1 {
-        margin-top: 50px; /* Reduce top margin on smaller screens */
         padding: 0 20px; /* Add padding to avoid content touching the screen edges */
+        display: flex;
+        margin: 30px 0px 0 0;
     }
 
     .title h1 {
@@ -136,12 +139,14 @@ body {
 
     .info {
         padding: 20px; /* Reduce padding for smaller screens */
-        width: 50%; /* Ensure info section takes full width */
+        width: 80%;
     }
 
     .first-name {
-        flex-direction: column; /* Stack the content vertically */
-        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
     }
 
     .info-1 {
@@ -151,10 +156,12 @@ body {
 
     .bio {
         padding: 10px; /* Reduce padding */
+        width: 100%;
     }
 
     .bio p {
         font-size: 13px; /* Smaller font for better readability */
+        width: 100%;
     }
 
     .bio img {
@@ -169,6 +176,10 @@ body {
 
     .education h1 {
         font-size: 20px; /* Reduce the size of the education section header */
+    }
+
+    .objective {
+        width: 90%;
     }
 
     .objective p {
