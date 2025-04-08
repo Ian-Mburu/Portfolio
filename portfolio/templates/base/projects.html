@@ -7,7 +7,7 @@
     <link rel="icon" href="{% static 'images/bag1.png' %}">
     <title>Projects</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles/projects-qa.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/projectss.css' %}">
 </head>
 <body>
     {% block content %}
@@ -24,9 +24,13 @@
                 <a href="{% url 'project-details' project.pk %}" class="details-link">
                     <div class="project-card">
                         <div class="project-details">
-                            <p1><strong>Technology:</strong> {{ project.projectTechnology }}</p1>
-                            <h2>{{ project.projectDate }}</h2>
-                            <h2>{{ project.projectName }}</h2>
+                            <h2 class="head">{{ project.projectName }}</h2>
+                            <h2 class="description">{{ project.projectDescription }}</h2>
+                                <div class="technology">
+                                    <p1 class="tech"><strong></strong> {{ project.projectTechnology }}</p1>
+                                    <h2 class="date">{{ project.projectDate }}</h2>
+                                </div>
+                            
                         </div>
                     </div>
                 </a>
