@@ -7,7 +7,7 @@
     <link rel="icon" href="{% static 'images/bag1.png' %}">
     <title>Project Details</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles/project-details-s.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/project-detail.css' %}">
 </head>
 <body>
     {% block content %}
@@ -15,17 +15,16 @@
     {% include 'navbar.html' %}
     
     <div class="content">
-            <header>
-                <h1>Project Showcase</h1>
-            </header>
         
             <section class="projects-list">
                     <div class="project-card">
-                        <img src="{{ project.projectImage.url }}" alt="{{ project.projectName }} Image" class="project-image">
                         <div class="project-details">
                             <h2>{{ project.projectName }}</h2>
-                            <p1><strong>Technology:</strong> {{ project.projectTechnology }}</p1>
-                            <a href="https://funza.onrender.com/">Project Link</a>
+                                <div class="tech-link">
+                                    <p1><strong>Technology:</strong> {{ project.projectTechnology }}</p1>
+                                    <a href="https://funza.onrender.com/">Project Link</a>
+                                </div>
+                            
                             <p>{{ project.projectDescription }}</p>
                         </div>
                     </div>
