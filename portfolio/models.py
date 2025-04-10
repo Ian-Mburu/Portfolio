@@ -5,7 +5,7 @@ from django.db import models
 
 class CreateProject(models.Model):
     projectName = models.CharField(max_length=200)
-    projectTechnology = models.CharField(max_length=20, null=False, blank=False)
+    projectTechnology = models.CharField(max_length=200, null=False, blank=False)
     projectDescription = models.TextField(null=False, blank=False)
     projectDate = models.DateField(null=False, blank=False)
 
