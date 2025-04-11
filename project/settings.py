@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL"),
+    'default': dj_database_url.config(
         conn_max_age=600,
-        ssl_require=True
+        conn_health_checks=True,
+        ssl_require=True  # Force SSL
     )
 }
 
